@@ -16,9 +16,6 @@ require_once "../vendor/autoload.php";
 require_once "../Solo/Core/BaseApplication.php";
 require_once '../App/Application.php';
 
-
-new Smarty();
-
 $basePath = "../";
 $config = dirname(__FILE__) . "/../config/local.php";
 
