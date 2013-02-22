@@ -13,9 +13,6 @@ use App\Application;
 
 require_once "../vendor/autoload.php";
 
-require_once "../Solo/Core/BaseApplication.php";
-require_once '../App/Application.php';
-
 $basePath = "../";
 $config = dirname(__FILE__) . "/../config/local.php";
 

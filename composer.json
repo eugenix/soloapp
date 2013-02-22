@@ -2,7 +2,7 @@
     "name": "solo/app",
 	"type": "application",
 	"description": "Solo framework app skeleton",
-	"keywords": ["application","solo framework"],
+	"keywords": [ "application","solo framework" ],
 	"homepage": "http://github.com/",
 	"license": "MIT",
 
@@ -21,8 +21,8 @@
 
 	"autoload": {
 		"psr-0": {
-			"App": "",
-			"Solo": ""
+			"App": "src/",
+			"Solo": "vendor/solo/framework"
 		}
 	},
 
@@ -30,16 +30,16 @@
 
 	"repositories": [
 		{
-			"type":"package",
+			"type": "package",
 			"package": {
-				"name":"smarty/smarty",
-				"version":"3.1.13",
-				"dist":{
-					"url":"http://www.smarty.net/files/Smarty-3.1.13.zip",
-					"type":"zip"
+				"name": "smarty/smarty",
+				"version": "3.1.13",
+				"dist": {
+					"url": "http://www.smarty.net/files/Smarty-3.1.13.zip",
+					"type": "zip"
 				},
 				"autoload": {
-					"classmap": ["libs/Smarty.class.php"]
+					"classmap": [ "libs/Smarty.class.php" ]
 				}
 			}
 		}

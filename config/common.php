@@ -2,66 +2,6 @@
 return array
 (
 	//
-	// Настройки импорта каталогов и классов
-	//
-	"import" => array
-	(
-		// в этот файл будет записана информация об импортированных каталогах и файлах
-		"classMapFile" => BASE_DIRECTORY . "/var/class.map",
-
-		//
-		// Установка псевдонимов путей. Псевдонимы используются для упрощения
-		// указания путей. Использование: ClassLoader::import("@solo/SomeClass.php");
-		// В этом случае директива @solo заменяется на полный путь к соответствующему каталогу
-		//
-		"alias" => array
-		(
-			// базовый каталог
-			"base" => BASE_DIRECTORY,
-
-			// путь к фреймворку
-			"solo" => BASE_DIRECTORY . "/Solo",
-
-			// путь к каталогу, где находятся файлы бизнес-логики (views, actions, etc.)
-			"app" => BASE_DIRECTORY . "/App",
-
-			// Каталог, доступный для Apache HTTP Server (Document root)
-			"public" => BASE_DIRECTORY . "/public",
-		),
-
-		// Эти каталоги будут импортированы в приложение
-		"directory" => array
-		(
-			"@solo/core/*",
-			"@solo/core/db/*",
-			"@solo/lib/Validator/*",
-			"@solo/lib/Web/*",
-			"@solo/core/web/session/*",
-
-			"@base/app/*",
-			"@base/app/views/*",
-			"@base/app/views/components/*",
-			"@base/app/managers/*",
-			"@base/app/entity/*",
-			"@base/app/actions/*"
-		),
-
-		// эти файлы будут имортированы в приложение
-		"file" => array
-		(
-			// Пример:
-			// Импортируем отдельный файл с указанием имени класса
-			//"path/to.file" => "ClassName",
-			//
-			// Импортируем отдельный файл без указания имени класса
-			// Имя класса будет определено по имени файла
-			// "@solo/lib/Web/ClientScript.php"
-			//
-		)
-	),
-
-
-	//
 	// Компоненты приложения
 	//
 	"components" => array
@@ -123,11 +63,11 @@ return array
 
 		// Каталог, где хранятся шаблоны для
 		// макетов страниц Layouts (относительно каталога приложения)
-		"directory.layouts" => BASE_DIRECTORY ."/App/templates/layouts",
+		"directory.layouts" => BASE_DIRECTORY ."/src/App/templates/layouts",
 
 		// Каталог, где хранятся шаблоны для
 		// контролов (относительно каталога приложения)
-		"directory.templates" => BASE_DIRECTORY ."/App/templates",
+		"directory.templates" => BASE_DIRECTORY ."/src/App/templates",
 	),
 
 
@@ -176,7 +116,7 @@ return array
 		// (cwd, current working directory), а затем относительно каждой директории в PHP-директиве include_path.
 		// Если $plugins_dir является массивом директорий, Smarty будет искать ваш плагин в каждой директории плагинов
 		// в том порядке, в котором они указаны.
-		"user.plugins" => BASE_DIRECTORY . "/App/smarty.plugins",
+		"user.plugins" => BASE_DIRECTORY . "/src/App/smarty.plugins",
 
 
 		//; Настройки безопасности Smarty. Рекомендуется значение TRUE
@@ -199,7 +139,7 @@ return array
 
 		//; This is the list of template directories that are considered secure.
 		//; $template_dir is in this list implicitly. Через запятую.
-		"secureDirs" => BASE_DIRECTORY . "/App/templates"
+		"secureDirs" => BASE_DIRECTORY . "/src/App/templates"
 	),
 
 	//
