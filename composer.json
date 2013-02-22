@@ -26,6 +26,8 @@
 		}
 	},
 
+	"minimum-stability": "stable",
+
 	"repositories": [
 		{
 			"type":"package",
