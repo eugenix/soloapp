@@ -1,7 +1,6 @@
 {
     "name": "solo/app",
 	"type": "application",
-	"version": "dev-master",
 	"description": "Solo framework app skeleton",
 	"keywords": [ "application","solo framework" ],
 	"homepage": "http://github.com/",
@@ -20,6 +19,7 @@
 		"smarty/smarty": "3.1.*",
 		"solo/framework": "3.0"
 	},
+
 
 	"autoload": {
 		"psr-0": {
@@ -61,12 +61,5 @@
 				}
 			}
 		}
-	],
-
-	"extra": {
-		"branch-alias": {
-			"dev-master": "1.0.x-dev"
-		}
-	}
-
+	]
 }
