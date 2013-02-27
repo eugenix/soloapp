@@ -1,6 +1,7 @@
 {
     "name": "solo/app",
 	"type": "application",
+	"version": "1.0",
 	"description": "Solo framework app skeleton",
 	"keywords": [ "application","solo framework" ],
 	"homepage": "http://github.com/",
