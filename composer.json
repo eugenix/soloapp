@@ -42,6 +42,22 @@
 					"classmap": [ "libs/Smarty.class.php" ]
 				}
 			}
+		},
+
+		{
+			"type": "package",
+			"package": {
+				"name": "solo/framework",
+				"version": "3.0",
+				"source": {
+					"url": "https://github.com/solo-framework/solo-framework.git",
+					"type": "git",
+					"reference": "revolution"
+				},
+				"autoload": {
+					"psr-0":  { "Solo": "" }
+				}
+			}
 		}
 	]
 
