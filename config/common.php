@@ -59,15 +59,15 @@ return array
 		"directory.temp" => BASE_DIRECTORY."/var/tmp",
 
 		// XML файл, который содержит номер текущей ревизии
-		"file.revision" => BASE_DIRECTORY ."/version.xml",
+		//"file.revision" => BASE_DIRECTORY ."/version.xml",
 
 		// Каталог, где хранятся шаблоны для
 		// макетов страниц Layouts (относительно каталога приложения)
-		"directory.layouts" => BASE_DIRECTORY ."/src/App/templates/layouts",
+		"directory.layouts" => BASE_DIRECTORY ."/src/apps/App/templates/layouts",
 
 		// Каталог, где хранятся шаблоны для
 		// контролов (относительно каталога приложения)
-		"directory.templates" => BASE_DIRECTORY ."/src/App/templates",
+		"directory.templates" => BASE_DIRECTORY ."/src/apps/App/templates",
 	),
 
 
@@ -87,7 +87,7 @@ return array
 		// Активирует debugging console - окно браузера, содержащее информацию о подключенных шаблонах
 		// и загруженных переменных для текущей страницы.
 		"debugging" => false,
-		
+
 		// Сообщает Smarty, будет или нет кэшироваться вывод шаблонов
 		// http://www.smarty.net/docsv2/ru/variable.caching.tpl
 		"caching" => 0,
@@ -124,7 +124,10 @@ return array
 		// (cwd, current working directory), а затем относительно каждой директории в PHP-директиве include_path.
 		// Если $plugins_dir является массивом директорий, Smarty будет искать ваш плагин в каждой директории плагинов
 		// в том порядке, в котором они указаны.
-		"user.plugins" => BASE_DIRECTORY . "/src/App/smarty.plugins",
+		"user.plugins" => array(
+			BASE_DIRECTORY . "/src/apps/App/smarty.plugins", // плагины, специфичные для этого проекта
+			BASE_DIRECTORY . "/src/libs/smarty.plugins" // плагины, общие для всех проектов
+		),
 
 
 		//; Настройки безопасности Smarty. Рекомендуется значение TRUE
@@ -147,7 +150,7 @@ return array
 
 		//; This is the list of template directories that are considered secure.
 		//; $template_dir is in this list implicitly. Через запятую.
-		"secureDirs" => BASE_DIRECTORY . "/src/App/templates"
+		"secureDirs" => BASE_DIRECTORY . "/src/apps/App/templates"
 	),
 
 	//
