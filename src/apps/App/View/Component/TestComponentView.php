@@ -8,7 +8,7 @@
  * @author  Andrey Filippov <afi@i-loto.ru>
  */
 
-namespace App\Views\Components;
+namespace App\View\Component;
 
 use Solo\Core\IViewComponent;
 use Solo\Core\View;

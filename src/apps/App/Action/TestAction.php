@@ -8,7 +8,7 @@
  * @author  Andrey Filippov <afi@i-loto.ru>
  */
 
-namespace App\Actions;
+namespace App\Action;
 
 use App\Application;
 use Solo\Core\Action;

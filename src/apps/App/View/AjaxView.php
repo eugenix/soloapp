@@ -7,7 +7,7 @@
  * To change this template use File | Settings | File Templates.
  */
 
-namespace App\Views;
+namespace App\View;
 
 use Solo\Core\IAjaxView;
 use Solo\Core\View;

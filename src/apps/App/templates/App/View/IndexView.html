@@ -4,15 +4,15 @@
 {$privateVar}
 
 {* Вставим в страницу компонент *}
-{component name="App.Views.Components.TestComponentView"}
+{component name="App.View.Component.TestComponentView"}
 
 {* Вставим компонент, который выводит сообщения об ошибках *}
-{component name="App.Views.Components.DisplayErrorView"}
+{component name="App.View.Component.DisplayErrorView"}
 
 {* Вставим код для восстановления данных формы *}
 {formrestore id="upload_form"}
 
-<form name="upload" id="upload_form" action="/action/test" enctype="multipart/form-data" method="post">
+<form name="upload" id="upload_form" action="{link action=test}" enctype="multipart/form-data" method="post">
 	Input text (required)<input type="text" name="text" id="text"/><br/>
 	I'am agree <input type="checkbox" name="agree" id="agree" value="111"/>
 
@@ -27,7 +27,7 @@
 $(document).ready(function(){
 	$("#name").click(function(){
 
-		$("#ajaxResult").load("/view/ajax");
+		$("#ajaxResult").load("view/ajax");
 	});
 });
 </script>
