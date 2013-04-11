@@ -13,13 +13,13 @@ $route = new Solo\Core\Route();
 //
 // представления
 //
-$route->add("/", 'App\Views\IndexView');
-$route->add("/view/ajax", 'App\Views\AjaxView');
+$route->add("/", 'App\View\IndexView');
+$route->add("/view/ajax", 'App\View\AjaxView');
 
 //
 // действия
 //
-$route->add("/action/test", 'App\Actions\TestAction');
+$route->add("/action/test", 'App\Action\TestAction');
 
 
 // Возвращаем объект Route
