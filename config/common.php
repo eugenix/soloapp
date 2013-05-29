@@ -11,7 +11,7 @@ return array
 		//
 		"db" => array
 		(
-			"@class" => "PDOAdapter",
+			"@class" => "Solo\\Core\\DB\\PDOAdapter",
 
 			// строка подлючения
 			"dsn" => "mysql:host=localhost;dbname=database",
@@ -33,6 +33,12 @@ return array
 		(
 			"@class" => "Solo\\Core\\Web\\Session\\FileSessionProvider"
 		),
+
+		"clientscript" => array
+		(
+			"@class" => "Solo\\Lib\\Web\\ClientScript",
+			"revision" => "0"
+		),
 	),
 
 	//
@@ -42,6 +48,9 @@ return array
 	(
 		// имя сессии
 		"sessionname" => "application_name",
+
+		// путь к файлу, где описываются правила маршрутизации
+		"routing" => BASE_DIRECTORY . "/config/routing.php",
 
 		// имя компонента приложения, реализующего провайдер сессии
 		"session.provider" => "session.files",
@@ -68,6 +77,11 @@ return array
 		// Каталог, где хранятся шаблоны для
 		// контролов (относительно каталога приложения)
 		"directory.templates" => BASE_DIRECTORY ."/src/apps/App/templates",
+
+		# Классы представлений для отображения ошибок приложения
+		# Можно использовать один и тот же класс
+		"error404class" => "\\App\\View\\Error404View",
+		"errorClass" => "\\App\\View\\ErrorView"
 	),
 
 
@@ -98,7 +112,7 @@ return array
 
 
 		//; Установка уровня ошибок, которые будут отображены. Соответствует уровням ошибок PHP
-		"error.reporting" => E_ALL & ~E_NOTICE,
+		"error.reporting" => E_ALL & ~E_NOTICE & ~E_STRICT,
 
 
 		//; Путь к каталогу для скомпилированных шаблонов

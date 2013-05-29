@@ -24,7 +24,7 @@
  */
 function smarty_function_link($params, $smarty)
 {
-	$str = "";
+	$str = "/";
 	foreach ($params as $k => $v)
 	{
 		$str .= "{$k}/{$v}/";

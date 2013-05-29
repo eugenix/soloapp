@@ -10,6 +10,8 @@
 
 $route = new Solo\Core\Route();
 
+$route->addDefault("/view", 'App\View\IndexView');
+
 //
 // представления
 //

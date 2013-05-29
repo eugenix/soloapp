@@ -35,7 +35,7 @@ function smarty_function_clientscript($params, $smarty)
 	}
 
 	if($type == "js")
-		return "<script language=\"javascript\" type=\"text/javascript\" src=\"{$fileName}?{$revision}\"></script>";
+		return "<script src=\"{$fileName}?{$revision}\"></script>";
 	if($type == "css")
 		return "<link type=\"text/css\" href=\"{$fileName}?{$revision}\" rel=\"stylesheet\" {$media}/>";
 	if($type == "swf")
