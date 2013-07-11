@@ -81,7 +81,12 @@ return array
 		# Классы представлений для отображения ошибок приложения
 		# Можно использовать один и тот же класс
 		"error404class" => "\\App\\View\\Error404View",
-		"errorClass" => "\\App\\View\\ErrorView"
+		"errorClass" => "\\App\\View\\ErrorView",
+
+		# обработчики
+		"handlers" => array(
+			"Solo\\Core\\Handler\\SessionHandler" => array(),
+		)
 	),
 
 
