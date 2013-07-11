@@ -83,8 +83,10 @@ return array
 		"error404class" => "\\App\\View\\Error404View",
 		"errorClass" => "\\App\\View\\ErrorView",
 
-		# обработчики
+		# Подключаем обработчики
 		"handlers" => array(
+
+			// Старт сессии
 			"Solo\\Core\\Handler\\SessionHandler" => array(),
 		)
 	),
