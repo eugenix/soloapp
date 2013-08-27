@@ -21,6 +21,9 @@ AddDefaultCharset utf-8
 # Запрет просмотра каталогов по урлу
 Options -Indexes
 
+# путь к файлу конфигурации
+SetEnv configFile "/../config/common.php"
+
 # Настройка mod_rewrite
 <IfModule mod_rewrite.c>
     RewriteEngine On

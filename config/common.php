@@ -150,28 +150,23 @@ return array
 			BASE_DIRECTORY . "/src/libs/smarty.plugins" // плагины, общие для всех проектов
 		),
 
-
 		//; Настройки безопасности Smarty. Рекомендуется значение TRUE
 		"security" => true,
+
+		// класс, реализующий настройки безопасности Smarty
+		"securityClass" => "",// для примера, нужно создать "App\\SmartySecurity", see http://www.smarty.net/docs/en/advanced.features.tpl
+
+		// опции безопасности, используются в том случае, если не задан "securityClass"
+		// см. класс Smarty_Security
+		"securityOptions" => array(
+			"secure_dir" => array(BASE_DIRECTORY . "/src/apps/App/templates"),			
+		),
 
 		//; Левый разделитель тегов Smarty
 		"leftDelimiter" => "{",
 
 		//; Правый разделитель тегов Smarty
 		"rightDelimiter" => "}",
-
-		//; Это список имён PHP-функций, разрешенных к использованию в условиях IF.
-		//; Описанные здесь - добавляются к предопределенным. Должны быть разделены запятой
-		//;IF_FUNCS => "strpos,count"
-
-
-		//; Это список имён PHP-функций, разрешенных к использованию в качестве модификаторов переменных.
-		//; Описанные здесь - добавляются к предопределенным. Должны быть разделены запятой
-		//;MODIFIER_FUNCS => "strpos,count"
-
-		//; This is the list of template directories that are considered secure.
-		//; $template_dir is in this list implicitly. Через запятую.
-		"secureDirs" => BASE_DIRECTORY . "/src/apps/App/templates"
 	),
 
 	//

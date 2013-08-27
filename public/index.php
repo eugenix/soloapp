@@ -14,7 +14,11 @@ use App\Application;
 require_once "../vendor/autoload.php";
 
 $basePath = "../";
-$config = dirname(__FILE__) . "/../config/local.php";
+$configFile = getenv("configFile");
+if (!$configFile)
+	exit("You have to define 'SetEnv configFile path-to-config-file' in your .htaccess");
+
+$config = dirname(__FILE__) . $configFile;
 
 Application::createApplication($basePath, $config);
 Application::getInstance()->handleRequest();
