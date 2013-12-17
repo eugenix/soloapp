@@ -21,7 +21,7 @@
 
 	"require": {
 		"php": ">=5.3.0",
-		"smarty/smarty": "3.1.*",
+		"smarty/smarty": "3.1.14",
 		"solo/framework": "dev-revolution"
 	},
 
@@ -41,7 +41,7 @@
 				"name": "smarty/smarty",
 				"version": "3.1.13",
 				"dist": {
-					"url": "http://www.smarty.net/files/Smarty-3.1.13.zip",
+					"url": "http://www.smarty.net/files/Smarty-3.1.14.zip",
 					"type": "zip"
 				},
 				"autoload": {
@@ -52,7 +52,7 @@
 
 		{
 			"type": "vcs",
-			"url": "git@github.com:solo-framework/solo-framework.git"
+			"url": "https://github.com/solo-framework/solo-framework.git"
 		}
 	]
 }
