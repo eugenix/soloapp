@@ -167,6 +167,9 @@ return array
 
 		//; Правый разделитель тегов Smarty
 		"rightDelimiter" => "}",
+		
+		// подключение фильтров (см. документацию к методу setAutoloadFilters)
+		"filters" => array()
 	),
 
 	//
