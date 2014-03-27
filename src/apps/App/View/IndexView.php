@@ -1,6 +1,6 @@
 <?php
 /**
- *
+ * Представление для шаблона.
  *
  * PHP version 5
  *
@@ -10,9 +10,7 @@
 
 namespace App\View;
 
-use Solo\Core\View;
-
-class IndexView extends View
+class IndexView extends BaseView
 {
 
 	/**

@@ -1,4 +1,4 @@
-.idea 
+./.idea
 var/tmp/*.*
 var/cache/*.*
 var/compile/*.*
@@ -7,3 +7,4 @@ vendor/
 
 !.gitkeep
 
+/.idea

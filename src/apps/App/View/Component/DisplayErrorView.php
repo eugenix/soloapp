@@ -10,19 +10,12 @@
 
 namespace App\View\Component;
 
+use App\View\BaseView;
 use Solo\Core\Context;
-use Solo\Core\IViewComponent;
-use Solo\Core\View;
+use Solo\Core\UI\IComponent;
 
-class DisplayErrorView extends View implements IViewComponent
+class DisplayErrorView extends BaseView implements IComponent
 {
-	/**
-	 * Путь к каталогу, где находится шаблон представления
-	 *
-	 * @var string
-	 */
-	//public $templateFolder = "components";
-
 	/**
 	 * Описание ошибки
 	 *

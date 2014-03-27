@@ -1,18 +1,13 @@
 <?php
 /**
- * Created by JetBrains PhpStorm.
- * User: afi
- * Date: 05.05.11
- * Time: 13:36
- * To change this template use File | Settings | File Templates.
+ * Пример представления для обработки Ajax-запроса
+ *
  */
-
 namespace App\View;
 
-use Solo\Core\IAjaxView;
-use Solo\Core\View;
+use Solo\Core\UI\IAjaxView;
 
-class AjaxView extends View implements IAjaxView
+class AjaxView extends BaseView implements IAjaxView
 {
 	public $value = null;
 

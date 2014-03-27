@@ -8,7 +8,7 @@
  * @author  Andrey Filippov <afi.work@gmail.com>
  */
 
-$route = new Solo\Core\Route();
+$route = new Solo\Core\Router();
 
 $route->addDefault("/view", 'App\View\IndexView');
 

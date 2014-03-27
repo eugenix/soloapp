@@ -10,7 +10,7 @@
 {component name="App.View.Component.DisplayErrorView"}
 
 {* Вставим код для восстановления данных формы *}
-{formrestore id="upload_form"}
+{*{formrestore id="upload_form"}*}
 
 <form name="upload" id="upload_form" action="{link action=test}" enctype="multipart/form-data" method="post">
 	Input text (required)<input type="text" name="text" id="text"/><br/>
@@ -19,7 +19,6 @@
 	<input type="submit" name="sub" value="go!" /><br/>
 	<input type="button" name="ajax" id="name" value="get by AJAX"/><br/>
 </form>
-
 
 <p id="ajaxResult"></p>
 

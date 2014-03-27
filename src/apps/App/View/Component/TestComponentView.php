@@ -10,11 +10,10 @@
 
 namespace App\View\Component;
 
-use Solo\Core\IViewComponent;
-use Solo\Core\View;
+use App\View\BaseView;
+use Solo\Core\UI\IComponent;
 
-
-class TestComponentView extends View implements IViewComponent
+class TestComponentView extends BaseView implements IComponent
 {
 	/**
 	 * Какое-то значение

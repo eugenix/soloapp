@@ -6,6 +6,73 @@ return array
 	//
 	"components" => array
 	(
+		"controller" => array
+		(
+			"@class" => "Solo\\Core\\Controller",
+			"rendererClass" => "Solo\\Core\\UI\\Smarty\\TemplateHandler",
+			"templateExtension" => ".html",
+			"isDebug" => true,
+
+			"options" => array
+			(
+				// наименования свойств соответствуют публичным атрибутам класса Smarty
+				"properties" => array
+				(
+					"compile_check" => true,
+					"debugging" => false,
+					"force_compile" => false,
+					"error_reporting" => E_ALL & ~E_NOTICE & ~E_STRICT
+				),
+				"folders" => array
+				(
+					// каталог для скомпилированных шаблонов
+					"compile" => BASE_DIRECTORY . "/var/compile",
+
+					// каталог для кэширования шаблонов
+					"cache" => BASE_DIRECTORY . "/var/cache",
+
+					// см. Smarty::setAutoloadFilters()
+					"filters" => "",
+
+					// список каталогов с плагинами Smarty
+					"plugins" => array(
+//							BASE_DIRECTORY . "/src/apps/App/smarty.plugins", // плагины, специфичные для этого проекта
+//							BASE_DIRECTORY . "/src/libs/smarty.plugins" // плагины, общие для всех проектов
+					),
+
+					// файл конфигурации Smarty
+					"config" => "",
+
+					// каталоги, в которых Smarty будет искать шаблоны
+					"templates" => array(
+							BASE_DIRECTORY . "/src/apps/App/templates/layouts",
+							BASE_DIRECTORY . "/src/apps/App/templates"
+					),
+				),
+				"security" => array
+				(
+					"enabled" => true,
+
+					// класс, реализующий настройки безопасности Smarty, если не задан, то используется встроенный
+					"securityClass" => "",
+
+					// опции безопасности, используются в том случае, если не задан "securityClass"
+					// см. класс Smarty_Security
+					"securityOptions" => array(
+							"secure_dir" => array(BASE_DIRECTORY . "/src/apps/App/templates"),
+							"php_modifiers" => array('escape', 'count', 'explode', 'implode')
+					),
+				),
+
+				// Список имен классов, реализующих плагины
+				"plugins" => array(
+					"Solo\\Core\\UI\\Smarty\\Plugins\\Link",
+					"Solo\\Core\\UI\\Smarty\\Plugins\\Component",
+				)
+			)
+
+		),
+
 		//
 		// Подключение к базе данных
 		//
@@ -159,7 +226,7 @@ return array
 		// опции безопасности, используются в том случае, если не задан "securityClass"
 		// см. класс Smarty_Security
 		"securityOptions" => array(
-			"secure_dir" => array(BASE_DIRECTORY . "/src/apps/App/templates"),			
+			"secure_dir" => array(BASE_DIRECTORY . "/src/apps/App/templates"),
 		),
 
 		//; Левый разделитель тегов Smarty
@@ -167,7 +234,7 @@ return array
 
 		//; Правый разделитель тегов Smarty
 		"rightDelimiter" => "}",
-		
+
 		// подключение фильтров (см. документацию к методу setAutoloadFilters)
 		"filters" => array()
 	),
