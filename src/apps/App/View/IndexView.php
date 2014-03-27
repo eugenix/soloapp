@@ -10,6 +10,8 @@
 
 namespace App\View;
 
+use Solo\Core\Context;
+
 class IndexView extends BaseView
 {
 
@@ -58,7 +60,4 @@ class IndexView extends BaseView
 		$this->title = "Заголовок страницы определен в IndexView и находится в layout/index.html";
 		$this->privateVar = "Это значение приватного свойства, оно не будет видно в шаблоне";
 	}
-
-
 }
-?>
