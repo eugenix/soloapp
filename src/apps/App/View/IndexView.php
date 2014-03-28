@@ -10,8 +10,6 @@
 
 namespace App\View;
 
-use Solo\Core\Context;
-
 class IndexView extends BaseView
 {
 

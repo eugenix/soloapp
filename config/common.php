@@ -64,10 +64,11 @@ return array
 					),
 				),
 
-				// А можно перечислить здесь список имен классов, реализующих плагины
+				// А можно перечислить здесь список имен классов, реализующих плагины (см. folders[plugins] выше)
 				"plugins" => array(
 					"Solo\\Core\\UI\\Smarty\\Plugins\\Link",
 					"Solo\\Core\\UI\\Smarty\\Plugins\\Component",
+					"Solo\\Web\\FormRestore\\Smarty\\FormRestore",
 				)
 			)
 

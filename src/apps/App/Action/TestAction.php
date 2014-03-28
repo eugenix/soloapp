@@ -13,8 +13,8 @@ namespace App\Action;
 use App\Application;
 use Solo\Core\Action;
 use Solo\Core\Request;
-use Solo\Lib\Validator\Validator;
-use Solo\Lib\Web\FormRestore;
+use Solo\Lib\Validation\Validator;
+use Solo\Web\FormRestore\FormRestore;
 
 class TestAction extends Action
 {
@@ -37,7 +37,7 @@ class TestAction extends Action
 			->required(true, "Не выбран agree");
 
 		// В зависимости от результата валидации формы делаем редирект
-		if (!$val->isValid())
+		if ($val->hasError())
 		{
 			FormRestore::saveData("upload_form");
 			Application::getInstance()->redirectBack($val->getMessages());
@@ -45,7 +45,6 @@ class TestAction extends Action
 		else
 			Application::getInstance()->redirect("/", "Действие успешно выполнено");
 
-
 	}
 }
-?>
+
